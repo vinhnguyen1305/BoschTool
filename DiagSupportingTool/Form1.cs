@@ -65,7 +65,7 @@ namespace DiagSupportingTool
 
         #endregion
 
-
+        #region Handle SandboxServices
         private void HandleCmd(string cmdInput)
         {
             Process proc = new Process();
@@ -159,6 +159,92 @@ namespace DiagSupportingTool
                     }
                 }
             }
+        }
+
+
+        #endregion
+
+
+
+        private void CbbService_SelectedValueChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void TxtLength_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CbbName_SelectedValueChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void TxtDID_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnCreateDID_Click_1(object sender, EventArgs e)
+        {
+            List<TextBox> txtDIDMatrix = new List<TextBox>();
+            List<ComboBox> cbbNameMatrix = new List<ComboBox>();
+            List<TextBox> txtLengthMatrix = new List<TextBox>();
+            List<ComboBox> cbbServiceMatrix = new List<ComboBox>();
+            TextBox oldTextboxDID = new TextBox() { Width = 0, Location = new Point(lbDID.Location.X, lbDID.Location.Y) };
+            ComboBox oldCommboBoxName = new ComboBox() { Width = 0, Location = new Point(lbName.Location.X, lbName.Location.Y) };
+            TextBox oldTextboxLength = new TextBox() { Width = 0, Location = new Point(lbLength.Location.X, lbLength.Location.Y) };
+            ComboBox oldComboBoxService = new ComboBox() { Width = 0, Location = new Point(lbService.Location.X, lbService.Location.Y) };
+
+            if(txtNbOfDID.Text == "")
+            {
+                MessageBox.Show("Please fill the number of DID!");
+            }
+            else
+            {
+                int numberOfDID = Convert.ToInt16(txtNbOfDID.Text.ToString());
+
+
+                for (int i = 0; i < numberOfDID; i++)
+                {
+                    TextBox txtDID = new TextBox()
+                    {
+                        Width = 100,
+                        Location = new Point(oldTextboxDID.Location.X, oldTextboxDID.Location.Y + 30),
+                    };
+                    txtDID.TextChanged += TxtDID_TextChanged;
+                    pnlDiag.Controls.Add(txtDID);
+                    oldTextboxDID = txtDID;
+
+                    ComboBox cbbName = new ComboBox()
+                    {
+                        Width = 330,
+                        Location = new Point(oldCommboBoxName.Location.X, oldCommboBoxName.Location.Y + 30),
+                    };
+                    cbbName.SelectedValueChanged += CbbName_SelectedValueChanged;
+                    oldCommboBoxName = cbbName;
+                    pnlDiag.Controls.Add(cbbName);
+
+                    TextBox txtLength = new TextBox()
+                    {
+                        Width = 100,
+                        Location = new Point(oldTextboxLength.Location.X, oldTextboxLength.Location.Y + 30)
+                    };
+                    txtLength.TextChanged += TxtLength_TextChanged;
+                    oldTextboxLength = txtLength;
+                    pnlDiag.Controls.Add(txtLength);
+
+                    ComboBox cbbService = new ComboBox()
+                    {
+                        Width = 100,
+                        Location = new Point(oldComboBoxService.Location.X, oldComboBoxService.Location.Y + 30)
+                    };
+                    cbbService.SelectedValueChanged += CbbService_SelectedValueChanged;
+                    oldComboBoxService = cbbService;
+                    pnlDiag.Controls.Add(cbbService);
+                }
+            }        
         }
     }
 }

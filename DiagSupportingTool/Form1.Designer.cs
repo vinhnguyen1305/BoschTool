@@ -31,6 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtQACListFile = new System.Windows.Forms.TextBox();
             this.btnRunQAC = new System.Windows.Forms.Button();
             this.btnGetInputQAC = new System.Windows.Forms.Button();
             this.txbSandboxFolder = new System.Windows.Forms.TextBox();
@@ -47,11 +48,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbString = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtQACListFile = new System.Windows.Forms.TextBox();
+            this.pnlDiag = new System.Windows.Forms.Panel();
+            this.lbService = new System.Windows.Forms.Label();
+            this.lbLength = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbDID = new System.Windows.Forms.Label();
+            this.btnCreateDID = new System.Windows.Forms.Button();
+            this.txtNbOfDID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.pnlDiag.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,6 +102,14 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SANDBOX SERVICES";
+            // 
+            // txtQACListFile
+            // 
+            this.txtQACListFile.Location = new System.Drawing.Point(244, 90);
+            this.txtQACListFile.Multiline = true;
+            this.txtQACListFile.Name = "txtQACListFile";
+            this.txtQACListFile.Size = new System.Drawing.Size(516, 96);
+            this.txtQACListFile.TabIndex = 6;
             // 
             // btnRunQAC
             // 
@@ -243,6 +261,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pnlDiag);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -251,13 +270,83 @@
             this.tabPage2.Text = "Diag";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtQACListFile
+            // pnlDiag
             // 
-            this.txtQACListFile.Location = new System.Drawing.Point(244, 90);
-            this.txtQACListFile.Multiline = true;
-            this.txtQACListFile.Name = "txtQACListFile";
-            this.txtQACListFile.Size = new System.Drawing.Size(516, 96);
-            this.txtQACListFile.TabIndex = 6;
+            this.pnlDiag.AutoScroll = true;
+            this.pnlDiag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlDiag.Controls.Add(this.lbService);
+            this.pnlDiag.Controls.Add(this.lbLength);
+            this.pnlDiag.Controls.Add(this.lbName);
+            this.pnlDiag.Controls.Add(this.lbDID);
+            this.pnlDiag.Controls.Add(this.btnCreateDID);
+            this.pnlDiag.Controls.Add(this.txtNbOfDID);
+            this.pnlDiag.Controls.Add(this.label1);
+            this.pnlDiag.Location = new System.Drawing.Point(6, 9);
+            this.pnlDiag.Name = "pnlDiag";
+            this.pnlDiag.Size = new System.Drawing.Size(805, 400);
+            this.pnlDiag.TabIndex = 14;
+            // 
+            // lbService
+            // 
+            this.lbService.AutoSize = true;
+            this.lbService.Location = new System.Drawing.Point(658, 47);
+            this.lbService.Name = "lbService";
+            this.lbService.Size = new System.Drawing.Size(43, 13);
+            this.lbService.TabIndex = 20;
+            this.lbService.Text = "Service";
+            // 
+            // lbLength
+            // 
+            this.lbLength.AutoSize = true;
+            this.lbLength.Location = new System.Drawing.Point(508, 47);
+            this.lbLength.Name = "lbLength";
+            this.lbLength.Size = new System.Drawing.Size(40, 13);
+            this.lbLength.TabIndex = 19;
+            this.lbLength.Text = "Length";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(128, 47);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(35, 13);
+            this.lbName.TabIndex = 18;
+            this.lbName.Text = "Name";
+            // 
+            // lbDID
+            // 
+            this.lbDID.AutoSize = true;
+            this.lbDID.Location = new System.Drawing.Point(18, 47);
+            this.lbDID.Name = "lbDID";
+            this.lbDID.Size = new System.Drawing.Size(26, 13);
+            this.lbDID.TabIndex = 17;
+            this.lbDID.Text = "DID";
+            // 
+            // btnCreateDID
+            // 
+            this.btnCreateDID.Location = new System.Drawing.Point(182, 9);
+            this.btnCreateDID.Name = "btnCreateDID";
+            this.btnCreateDID.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateDID.TabIndex = 16;
+            this.btnCreateDID.Text = "Create";
+            this.btnCreateDID.UseVisualStyleBackColor = true;
+            this.btnCreateDID.Click += new System.EventHandler(this.btnCreateDID_Click_1);
+            // 
+            // txtNbOfDID
+            // 
+            this.txtNbOfDID.Location = new System.Drawing.Point(98, 11);
+            this.txtNbOfDID.Name = "txtNbOfDID";
+            this.txtNbOfDID.Size = new System.Drawing.Size(70, 20);
+            this.txtNbOfDID.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Number of DID";
             // 
             // Form1
             // 
@@ -273,6 +362,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.pnlDiag.ResumeLayout(false);
+            this.pnlDiag.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -299,6 +391,14 @@
         private System.Windows.Forms.Button btnGetInputQAC;
         private System.Windows.Forms.Button btnRunQAC;
         private System.Windows.Forms.TextBox txtQACListFile;
+        private System.Windows.Forms.Panel pnlDiag;
+        private System.Windows.Forms.Label lbService;
+        private System.Windows.Forms.Label lbLength;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbDID;
+        private System.Windows.Forms.Button btnCreateDID;
+        private System.Windows.Forms.TextBox txtNbOfDID;
+        private System.Windows.Forms.Label label1;
     }
 }
 
