@@ -1,0 +1,9 @@
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\bin\Debug\DiagSupportingTool.exe.config
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\bin\Debug\DiagSupportingTool.exe
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\bin\Debug\DiagSupportingTool.pdb
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\obj\Debug\DiagSupportingTool.csprojResolveAssemblyReference.cache
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\obj\Debug\DiagSupportingTool.Form1.resources
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\obj\Debug\DiagSupportingTool.Properties.Resources.resources
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\obj\Debug\DiagSupportingTool.csproj.GenerateResource.Cache
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\obj\Debug\DiagSupportingTool.exe
+D:\Important\PROGRAM\LAP TRINH C#\Winform\BoschTool\DiagSupportingTool\DiagSupportingTool\obj\Debug\DiagSupportingTool.pdb
